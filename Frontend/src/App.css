@@ -749,3 +749,8 @@ footer .input-group-text {
 }
 
 /* Shipping page ends here */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
