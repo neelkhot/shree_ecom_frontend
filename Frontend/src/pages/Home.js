@@ -440,7 +440,7 @@ const Home = () => {
                             <img src={prodcompare} alt="compare" />
                           </button> */}
                           {/* <button className="border-0 bg-transparent">
-                            <img
+                            <imgasdfasdf
                               onClick={() => navigate("/product/" + item?._id)}
                               src={view}
                               alt="view"
