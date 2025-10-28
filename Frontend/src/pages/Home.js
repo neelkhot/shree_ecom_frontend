@@ -46,28 +46,78 @@ const Home = () => {
   };
   return (
     <>
-   <section className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden rounded-3xl">
+    <section
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "90vh", // you can adjust to 70vh if you want smaller height
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        borderRadius: "20px",
+      }}
+    >
       {/* Background Image */}
       <img
         src="images/123.jpg"
         alt="Fashion Banner"
-        className="absolute inset-0 w-full h-full object-cover"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover", // ensures it fills horizontally without distortion
+          objectPosition: "center", // keeps it centered
+        }}
       />
 
-      {/* Overlay for tint */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      {/* Overlay Tint */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.4)", // dark overlay
+        }}
+      ></div>
 
       {/* Content */}
-      <div className="relative text-center text-white px-6">
-        <h1 className="text-5xl md:text-6xl font-bold tracking-wide mb-4">
+      <div
+        style={{
+          position: "relative",
+          color: "white",
+          textAlign: "center",
+          padding: "0 20px",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: "3rem",
+            fontWeight: "bold",
+            marginBottom: "1rem",
+            letterSpacing: "1px",
+          }}
+        >
           Discover Your Style
         </h1>
-        <p className="text-lg md:text-xl mb-6">
+        <p style={{ fontSize: "1.25rem", marginBottom: "1.5rem" }}>
           Trendy collections for every season
         </p>
         <a
           href="/shop"
-          className="inline-block bg-white text-black font-semibold px-8 py-3 rounded-full hover:bg-gray-200 transition duration-300"
+          style={{
+            display: "inline-block",
+            backgroundColor: "white",
+            color: "black",
+            fontWeight: "600",
+            padding: "12px 32px",
+            borderRadius: "50px",
+            textDecoration: "none",
+            transition: "background 0.3s ease",
+          }}
+          onMouseEnter={(e) => (e.target.style.background = "#ddd")}
+          onMouseLeave={(e) => (e.target.style.background = "white")}
         >
           Shop Now
         </a>
