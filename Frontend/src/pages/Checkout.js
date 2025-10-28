@@ -358,6 +358,8 @@ const Checkout = () => {
                     <option value="" selected disabled>
                       Select State
                     </option>
+                     <option value="Maharashtra">Maharashtra</option>
+                      <option value="Karanataka">Karanataka</option>
                     <option value="Gujarat">Gujarat</option>
                   </select>
                   <div className="error ms-2 my-1">
