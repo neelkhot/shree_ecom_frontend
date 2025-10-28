@@ -105,7 +105,7 @@ const Home = () => {
           Trendy collections for every season
         </p>
         <a
-          href="/shop"
+          href="/product"
           style={{
             display: "inline-block",
             backgroundColor: "white",
