@@ -55,7 +55,7 @@ const Home = () => {
         alignItems: "center",
         justifyContent: "center",
         overflow: "hidden",
-        borderRadius: "20px",
+        borderRadius: "0px",
       }}
     >
       {/* Background Image */}
@@ -365,7 +365,7 @@ const Home = () => {
         </div>
       </Container>
 
-      <Container class1="famous-wrapper py-5 home-wrapper-2">
+      {/* <Container class1="famous-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-3">
             <div className="famous-card position-relative">
@@ -424,7 +424,105 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </Container>
+      </Container> */}
+      <div
+      style={{
+        padding: "50px 0",
+        backgroundColor: "#f8f8f8",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          gap: "20px",
+          maxWidth: "1200px",
+          margin: "0 auto",
+          flexWrap: "wrap",
+        }}
+      >
+        {/* Card 1 */}
+        <div
+          style={{
+            flex: "1 1 22%",
+            background: "linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%)",
+            borderRadius: "15px",
+            padding: "30px 20px",
+            textAlign: "center",
+            color: "#222",
+            boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+            transition: "transform 0.3s ease",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
+          onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+        >
+          <h4 style={{ fontSize: "1.1rem", letterSpacing: "1px" }}>Women’s Collection</h4>
+          <h3 style={{ fontSize: "1.6rem", margin: "10px 0" }}>New Arrivals</h3>
+          <p style={{ fontSize: "1rem" }}>Fresh looks for every occasion.</p>
+        </div>
+
+        {/* Card 2 */}
+        <div
+          style={{
+            flex: "1 1 22%",
+            background: "linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%)",
+            borderRadius: "15px",
+            padding: "30px 20px",
+            textAlign: "center",
+            color: "#222",
+            boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+            transition: "transform 0.3s ease",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
+          onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+        >
+          <h4 style={{ fontSize: "1.1rem", letterSpacing: "1px" }}>Men’s Wear</h4>
+          <h3 style={{ fontSize: "1.6rem", margin: "10px 0" }}>Classic & Modern</h3>
+          <p style={{ fontSize: "1rem" }}>Redefine your wardrobe essentials.</p>
+        </div>
+
+        {/* Card 3 */}
+        <div
+          style={{
+            flex: "1 1 22%",
+            background: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
+            borderRadius: "15px",
+            padding: "30px 20px",
+            textAlign: "center",
+            color: "#222",
+            boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+            transition: "transform 0.3s ease",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
+          onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+        >
+          <h4 style={{ fontSize: "1.1rem", letterSpacing: "1px" }}>Footwear</h4>
+          <h3 style={{ fontSize: "1.6rem", margin: "10px 0" }}>Step into Style</h3>
+          <p style={{ fontSize: "1rem" }}>Trendy sneakers and comfy heels.</p>
+        </div>
+
+        {/* Card 4 */}
+        <div
+          style={{
+            flex: "1 1 22%",
+            background: "linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%)",
+            borderRadius: "15px",
+            padding: "30px 20px",
+            textAlign: "center",
+            color: "#222",
+            boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+            transition: "transform 0.3s ease",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
+          onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+        >
+          <h4 style={{ fontSize: "1.1rem", letterSpacing: "1px" }}>Accessories</h4>
+          <h3 style={{ fontSize: "1.6rem", margin: "10px 0" }}>Complete the Look</h3>
+          <p style={{ fontSize: "1rem" }}>Bags, belts, and jewelry that shine.</p>
+        </div>
+      </div>
+    </div>
+
 
       <Container class1="special-wrapper py-5 home-wrapper-2">
         <div className="row">
