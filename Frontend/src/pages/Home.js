@@ -46,23 +46,24 @@ const Home = () => {
   };
   return (
     <>
-    <section
-      className="relative w-full h-[90vh] flex items-center justify-center bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?auto=format&fit=crop&w=1600&q=80')",
-      }}
-    >
-      {/* Overlay for dark tint */}
+   <section className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden rounded-3xl">
+      {/* Background Image */}
+      <img
+        src="images/123.jpg"
+        alt="Fashion Banner"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* Overlay for tint */}
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
       {/* Content */}
       <div className="relative text-center text-white px-6">
         <h1 className="text-5xl md:text-6xl font-bold tracking-wide mb-4">
-          Elevate Your Style
+          Discover Your Style
         </h1>
         <p className="text-lg md:text-xl mb-6">
-          Discover the latest fashion trends and exclusive collections
+          Trendy collections for every season
         </p>
         <a
           href="/shop"
