@@ -85,7 +85,7 @@ const Header = () => {
             <div className="col-2">
               <h2>
                 <Link className="text-white" to="/ ">
-                  E-commerce website
+                  Ecommerce website
                 </Link>
               </h2>
             </div>
