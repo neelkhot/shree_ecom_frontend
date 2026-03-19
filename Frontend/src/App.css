@@ -751,6 +751,193 @@ footer .input-group-text {
 /* Shipping page ends here */
 
 
+/* ================= PRODUCT CARD ================= */
+
+.el-wrapper {
+  width: 100%;
+  padding: 15px;
+  margin: 15px auto;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* TOP SECTION */
+.box-up {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 15px;
+  transition: all 0.6s ease;
+}
+
+/* Hover blur effect */
+.el-wrapper:hover .img {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  opacity: 0.4;
+}
+
+/* INFO OVER IMAGE */
+.img-info {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  left: 0;
+  text-align: center;
+}
+
+.info-inner {
+  transition: all 0.4s ease;
+}
+
+.info-inner .p-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #252525;
+  display: block;
+}
+
+.info-inner .p-company {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* SIZE TEXT */
+.a-size {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.a-size .size {
+  color: #000;
+  font-weight: 500;
+}
+
+/* Hover effects */
+.el-wrapper:hover .info-inner {
+  transform: translateY(-20px);
+}
+
+.el-wrapper:hover .a-size {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= BOTTOM SECTION ================= */
+
+.box-down {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sliding background */
+.h-bg {
+  width: 200%;
+  height: 100%;
+  background-color: #3f96cd;
+  position: absolute;
+  left: -200%;
+  transition: all 0.5s ease;
+}
+
+.h-bg-inner {
+  width: 50%;
+  height: 100%;
+  background-color: #333;
+}
+
+/* Hover background slide */
+.el-wrapper:hover .h-bg {
+  left: 0;
+}
+
+/* CART BUTTON */
+.cart {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* PRICE */
+.cart .price {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+  color: #252525;
+  font-size: 16px;
+}
+
+/* ADD TO CART TEXT */
+.cart .add-to-cart {
+  position: absolute;
+  top: 50%;
+  left: 120%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.cart .add-to-cart .txt {
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hover animation */
+.el-wrapper:hover .price {
+  left: 20px;
+  transform: translateY(-50%);
+  color: #eee;
+}
+
+.el-wrapper:hover .add-to-cart {
+  left: 50%;
+}
+
+/* ================= WISHLIST ICON ================= */
+
+.el-wrapper button {
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .box-up {
+    height: 220px;
+  }
+
+  .info-inner .p-name {
+    font-size: 14px;
+  }
+
+  .cart .price {
+    font-size: 14px;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

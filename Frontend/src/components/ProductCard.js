@@ -47,90 +47,84 @@ const ProductCard = (props) => {
   };
 
   return (
-    <>
-      {data?.map((item, index) => {
-        const isWishlist = isProductInWishlist(item._id);
-        console.log(isWishlist);
-        return (
-          <div
-            key={index}
-            className={` ${
-              location.pathname == "/product" ? `gr-${grid}` : "col-3"
-            } `}
-          >
-            <div className="product-card position-relative">
-              <div className="wishlist-icon position-absolute">
-                <button
-                  className="border-0 bg-transparent"
-                  onClick={(e) => addToWish(item?._id)}
-                >
-                  {isWishlist ? (
-                    <AiFillHeart className="fs-5 me-1" />
-                  ) : (
-                    <AiOutlineHeart className="fs-5 me-1" />
-                  )}
-                </button>
-              </div>
+  <>
+    {data?.map((item, index) => {
+      const isWishlist = isProductInWishlist(item._id);
 
-              <div className="product-image">
-                <img
-                  src={item?.images[0]?.url}
-                  // className="img-fluid d"
-                  alt="product image"
-                  height={"250px"}
-                  width={"100%"}
-                  onClick={() => navigate("/product/" + item?._id)}
-                />
-                <img
-                  src={item?.images[0]?.url}
-                  // className="img-fluid d"
-                  alt="product image"
-                  height={"250px"}
-                  width={"100%"}
-                  onClick={() => navigate("/product/" + item?._id)}
-                />
-              </div>
-              <div className="product-details">
-                <h6 className="brand">{item?.brand}</h6>
-                <h5 className="product-title">
-                  {grid === 12 || grid === 6
-                    ? item?.title
-                    : item?.title?.substr(0, 80) + "..."}
-                </h5>
-                <ReactStars
-                  count={5}
-                  size={24}
-                  value={item?.totalrating}
-                  edit={false}
-                  activeColor="#ffd700"
-                />
+      return (
+        <div
+          key={index}
+          className={`${
+            location.pathname === "/product" ? `gr-${grid}` : "col-3"
+          }`}
+        >
+          <div className="el-wrapper position-relative">
 
-                <p className="price">Rs.{item?.price}</p>
-              </div>
-              <div className="action-bar position-absolute">
-                <div className="d-flex flex-column gap-15">
-                  {/* <button className="border-0 bg-transparent">
-                    <img src={prodcompare} alt="compare" />
-                  </button> */}
+            {/* Wishlist Icon (kept from your logic) */}
+            <div className="position-absolute" style={{ top: "10px", right: "10px", zIndex: 2 }}>
+              <button
+                className="border-0 bg-transparent"
+                onClick={() => addToWish(item?._id)}
+              >
+                {isWishlist ? (
+                  <AiFillHeart className="fs-5 text-danger" />
+                ) : (
+                  <AiOutlineHeart className="fs-5" />
+                )}
+              </button>
+            </div>
 
-                  {/* <button className="border-0 bg-transparent">
-                    <img
-                      onClick={() => navigate("/product/" + item?._id)}
-                      src={view}
-                      alt="view"
-                    />
-                  </button> */}
-                  {/* <button className="border-0 bg-transparent">
-                    <img src={addcart} alt="addcart" />
-                  </button> */}
+            {/* TOP SECTION */}
+            <div className="box-up">
+              <img
+                className="img"
+                src={item?.images[0]?.url}
+                alt="product"
+                onClick={() => navigate("/product/" + item?._id)}
+              />
+
+              <div className="img-info">
+                <div className="info-inner">
+                  <span className="p-name">
+                    {grid === 12 || grid === 6
+                      ? item?.title
+                      : item?.title?.substr(0, 40) + "..."}
+                  </span>
+
+                  <span className="p-company">{item?.brand}</span>
+                </div>
+
+                {/* Optional (static or dynamic sizes) */}
+                <div className="a-size">
+                  Available sizes :
+                  <span className="size"> S , M , L , XL</span>
                 </div>
               </div>
             </div>
+
+            {/* BOTTOM SECTION */}
+            <div className="box-down">
+              <div className="h-bg">
+                <div className="h-bg-inner"></div>
+              </div>
+
+              <button
+                className="cart border-0 bg-transparent"
+                onClick={() => navigate("/product/" + item?._id)}
+              >
+                <span className="price">₹{item?.price}</span>
+
+                <span className="add-to-cart">
+                  <span className="txt">View Product</span>
+                </span>
+              </button>
+            </div>
+
           </div>
-        );
-      })}
-    </>
-  );
-};
+        </div>
+      );
+    })}
+  </>
+);}
 
 export default ProductCard;
